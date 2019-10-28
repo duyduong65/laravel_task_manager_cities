@@ -32,4 +32,8 @@ Route::prefix('/cities')->group(function (){
     Route::post('edit/{id}','CitiesController@update')->name('cities.update');
 });
 
+Route::prefix('/customers')->group(function (){
+    Route::get('index','CustomersController@index')->name('customers.index');
+});
+
 
