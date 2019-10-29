@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\City;
 use App\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class CustomersController extends Controller
 {
@@ -78,7 +79,12 @@ class CustomersController extends Controller
     public function destroy($id)
     {
         $customer = $this->customer->findOrFail($id);
+
+        if (file_exists(storage_path("/app/public/upload/$customer->image"))){
+            File::delete(storage_path("/app/public/upload/$customer->image"));
+        }
         $customer->delete();
+
         return redirect()->route('customers.index');
     }
 }

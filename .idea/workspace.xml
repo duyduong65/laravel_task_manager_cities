@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4def5d23-66e8-472c-95cf-7c7a6ac6affe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_29_065014_add_column_image_to_customers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/CustomersSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/UsersSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cities/list_customer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/customers/create_customer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/customers/edit_customer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/customers/list_customer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/City.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitiesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_28_131747_create_cities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_28_131747_create_cities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_28_164338_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_28_164338_create_customers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CitiesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CitiesSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cities/list_city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cities/list_city.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_29_065014_add_column_image_to_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_29_065014_add_column_image_to_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cities/list_customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cities/list_customer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customers/list_customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customers/list_customer.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +130,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public" />
+      <recent name="$PROJECT_DIR$/storage/app" />
       <recent name="$PROJECT_DIR$/storage/app/public/upload" />
       <recent name="E:\xampp\htdocs\html\task_manager_city\resources\views\cities" />
     </key>
@@ -176,8 +166,16 @@
       <updated>1572262612351</updated>
       <workItem from="1572262615179" duration="16519000" />
       <workItem from="1572281504277" duration="296000" />
-      <workItem from="1572310334787" duration="22007000" />
+      <workItem from="1572310334787" duration="24395000" />
     </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1572339509262</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572339509262</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,5 +196,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
 </project>

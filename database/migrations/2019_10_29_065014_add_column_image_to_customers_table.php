@@ -14,7 +14,7 @@ class AddColumnImageToCustomersTable extends Migration
     public function up()
     {
         Schema::table('customers', function (Blueprint $table) {
-            $table->char('image')->nullable()->after('address');
+            $table->string('image')->nullable()->after('address');
         });
     }
 

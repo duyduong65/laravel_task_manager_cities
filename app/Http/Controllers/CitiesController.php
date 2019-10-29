@@ -40,7 +40,7 @@ class CitiesController extends Controller
     public function show($id)
     {
         $city = $this->city->findOrFail($id);
-        $listCustomer = $city->customers;
+        $listCustomer = $city->customers()->get();
         return view('cities.list_customer', compact('listCustomer'));
     }
 
