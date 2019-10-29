@@ -39,7 +39,9 @@ class CitiesController extends Controller
 
     public function show($id)
     {
-        //
+        $city = $this->city->findOrFail($id);
+        $listCustomer = $city->customers;
+        return view('cities.list_customer', compact('listCustomer'));
     }
 
     public function edit($id)
@@ -63,4 +65,6 @@ class CitiesController extends Controller
         $city->delete();
         return redirect()->route('cities.index');
     }
+
+
 }

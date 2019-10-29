@@ -15,7 +15,7 @@
                     @foreach($cities as $key => $city)
                         <tr>
                             <th scope="row">{{++$key}}</th>
-                            <td ><a href="">{{$city->cityName}}</a></td>
+                            <td ><a href="{{route('cities.showListCustomer',$city->id)}}">{{$city->cityName}}</a></td>
                             <td>
                                 <a href="{{route('cities.destroy',$city->id)}}">
                                     <img src="https://img.icons8.com/nolan/30/000000/delete-sign.png">

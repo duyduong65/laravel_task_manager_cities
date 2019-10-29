@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4def5d23-66e8-472c-95cf-7c7a6ac6affe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Customer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_28_164338_create_customers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_29_065014_add_column_image_to_customers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/CustomersSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UsersSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cities/list_customer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customers/create_customer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customers/edit_customer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/customers/list_customer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitiesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_28_131747_create_cities_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_28_131747_create_cities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_28_164338_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_28_164338_create_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/CitiesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CitiesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cities/list_city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cities/list_city.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,14 +134,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CustomerCity" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel_student_manager_validate_login" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public/upload" />
       <recent name="E:\xampp\htdocs\html\task_manager_city\resources\views\cities" />
     </key>
   </component>
@@ -165,6 +176,7 @@
       <updated>1572262612351</updated>
       <workItem from="1572262615179" duration="16519000" />
       <workItem from="1572281504277" duration="296000" />
+      <workItem from="1572310334787" duration="22007000" />
     </task>
     <servers />
   </component>

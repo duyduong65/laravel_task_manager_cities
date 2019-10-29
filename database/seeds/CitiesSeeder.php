@@ -30,5 +30,8 @@ class CitiesSeeder extends Seeder
         DB::table('cities')->insert([
             'cityName'=>"Lạng Sơn"
         ]);
+        DB::table('cities')->insert([
+            'cityName'=>"Lào Cai"
+        ]);
     }
 }

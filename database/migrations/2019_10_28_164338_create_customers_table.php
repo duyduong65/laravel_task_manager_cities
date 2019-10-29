@@ -15,13 +15,16 @@ class CreateCustomersTable extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
+
             $table->string('firstName')->nullable();
             $table->string('lastName')->nullable();
             $table->integer('phone')->nullable();
             $table->string('address')->nullable();
-            $table->bigInteger('city_id')->unsigned();
-            $table->foreign('city_id')->references('id')->on('cities');
+
+            $table->unsignedBigInteger('city_id');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
+
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
