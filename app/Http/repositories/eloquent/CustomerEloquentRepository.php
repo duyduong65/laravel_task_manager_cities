@@ -8,6 +8,7 @@ use App\Customer;
 use App\Http\repositories\CustomerRepositoryInterface;
 use App\Http\Requests\CreateCustomerRequest;
 use Illuminate\Support\Facades\Request;
+use phpDocumentor\Reflection\Types\This;
 
 
 class CustomerEloquentRepository implements CustomerRepositoryInterface
@@ -19,14 +20,23 @@ class CustomerEloquentRepository implements CustomerRepositoryInterface
         $this->customer = $customer;
     }
 
-    function index()
+    function getAll()
     {
-        return Customer::all();
+        return $this->customer->all();
     }
 
-    function store($obj)
+    function save($obj)
     {
         $obj->save();
     }
 
+    function findById($id)
+    {
+      return  $this->customer->findOrFail($id);
+    }
+
+    function delete($obj)
+    {
+        $obj->delete();
+    }
 }

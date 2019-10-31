@@ -9,7 +9,9 @@ class City extends Model
     protected $fillable = [
         'cityName'
     ];
-    function customers(){
+
+    function customers()
+    {
         return $this->hasMany('App\Customer');
     }
 }

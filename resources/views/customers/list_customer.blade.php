@@ -25,7 +25,7 @@
                             <td>{{$customer->phone}}</td>
                             <td>{{$customer->address}}</td>
                             <td>{{$customer->city->cityName}}</td>
-                            <td><img src="{{asset("/storage/$customer->image")}}" class="img-fluid" alt="" width="80" ></td>
+                            <td><img src="{{asset("storage/$customer->image")}}" class="img-fluid" alt="" width="100" ></td>
                             <td>
                                 <a href="{{route('customers.destroy',$customer->id)}}">
                                     <img src="https://img.icons8.com/nolan/30/000000/delete-sign.png" alt="delete">

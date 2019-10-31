@@ -4,21 +4,23 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Customer;
+use App\Http\repositories\CityRepositoryInterface;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use App\Http\services\CityServiceInterface;
 use App\Http\services\CustomerServiceInterface;
 use Illuminate\Support\Facades\File;
 
 class CustomersController extends Controller
 {
     protected $customerService;
-    protected $city;
+    protected $cityService;
 
-    public function __construct(CustomerServiceInterface $customerService, City $city)
+    public function __construct(CustomerServiceInterface $customerService,CityServiceInterface $cityService )
     {
         $this->middleware('auth');
         $this->customerService = $customerService;
-        $this->city = $city;
+        $this->cityService = $cityService;
     }
 
     public function index()
@@ -29,7 +31,7 @@ class CustomersController extends Controller
 
     public function create()
     {
-        $listCity = $this->city->all();
+        $listCity = $this->cityService->getAll();
         return view('customers.create_customer', compact('listCity'));
     }
 
@@ -46,33 +48,21 @@ class CustomersController extends Controller
 
     public function edit($id)
     {
-        $customer = $this->customer->findOrFail($id);
-        $listCity = $this->city->all();
+        $customer = $this->customerService->edit($id);
+        $listCity = $this->cityService->getAll();
         return view('customers.edit_customer', compact(['customer', 'listCity']));
     }
 
     public function update(UpdateCustomerRequest $request, $id)
     {
-        $customer = $this->customer->findOrFail($id);
-        $customer->update([
-            'firstName' => $request->firstName,
-            'lastName' => $request->lastName,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'city_id' => $request->city_id,
-        ]);
+        $this->customerService->update($id, $request);
+
         return redirect()->route('customers.index');
     }
 
     public function destroy($id)
     {
-        $customer = $this->customer->findOrFail($id);
-
-        if (file_exists(storage_path("/app/public/upload/$customer->image"))) {
-            File::delete(storage_path("/app/public/upload/$customer->image"));
-        }
-        $customer->delete();
-
+        $this->customerService->destroy($id);
         return redirect()->route('customers.index');
     }
 }
