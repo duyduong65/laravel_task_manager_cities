@@ -4,24 +4,26 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Customer;
-use Illuminate\Http\Request;
+use App\Http\Requests\CreateCustomerRequest;
+use App\Http\Requests\UpdateCustomerRequest;
+use App\Http\services\CustomerServiceInterface;
 use Illuminate\Support\Facades\File;
 
 class CustomersController extends Controller
 {
-    protected $customer;
+    protected $customerService;
     protected $city;
 
-    public function __construct(Customer $customer, City $city)
+    public function __construct(CustomerServiceInterface $customerService, City $city)
     {
         $this->middleware('auth');
-        $this->customer = $customer;
+        $this->customerService = $customerService;
         $this->city = $city;
     }
 
     public function index()
     {
-        $customers = $this->customer->all();
+        $customers = $this->customerService->getAll();
         return view('customers.list_customer', compact('customers'));
     }
 
@@ -31,23 +33,9 @@ class CustomersController extends Controller
         return view('customers.create_customer', compact('listCity'));
     }
 
-    public function store(Request $request)
+    public function store(CreateCustomerRequest $request)
     {
-        $image = $request->image;
-        $destinationPath = 'public/upload';
-        $fileName = date('ymdhisa') . "." . $image->getClientOriginalExtension();
-
-        $this->customer->create([
-            'firstName' => $request->firstName,
-            'lastName' => $request->lastName,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'image' => $fileName,
-            'city_id' => $request->city_id,
-        ]);
-
-        $image->storeAs($destinationPath, $fileName);
-
+        $this->customerService->store($request);
         return redirect()->route('customers.index');
     }
 
@@ -63,7 +51,7 @@ class CustomersController extends Controller
         return view('customers.edit_customer', compact(['customer', 'listCity']));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateCustomerRequest $request, $id)
     {
         $customer = $this->customer->findOrFail($id);
         $customer->update([
@@ -80,7 +68,7 @@ class CustomersController extends Controller
     {
         $customer = $this->customer->findOrFail($id);
 
-        if (file_exists(storage_path("/app/public/upload/$customer->image"))){
+        if (file_exists(storage_path("/app/public/upload/$customer->image"))) {
             File::delete(storage_path("/app/public/upload/$customer->image"));
         }
         $customer->delete();

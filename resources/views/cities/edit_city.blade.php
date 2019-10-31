@@ -9,7 +9,14 @@
                         <form method="post" action="{{route('cities.update',$city->id)}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" value="{{$city->cityName}}" name="city">
+                                <input type="text"
+                                       class="form-control @if($errors->has('city')) border-danger @endif"
+                                       value="{{$city->cityName}}" name="city">
+                                @if($errors->has('city'))
+                                    <span class="text-danger">
+                                            <img src="https://img.icons8.com/color/18/000000/warning-shield.png">
+                                            {{$errors->first('city')}}</span>
+                                @endif
                             </div>
                             <button type="submit" class="btn btn-primary">Update</button>
                         </form>

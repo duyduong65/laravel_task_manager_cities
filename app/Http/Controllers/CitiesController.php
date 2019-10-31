@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\City;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\Http\Requests\CreateCityRequest;
+use App\Http\Requests\UpdateCityRequest;
+
 
 class CitiesController extends Controller
 {
@@ -22,18 +23,17 @@ class CitiesController extends Controller
         return view('cities.list_city', compact('cities'));
     }
 
-    public function create(Request $request)
+    public function create()
     {
         return view('cities.create_city');
     }
 
 
-    public function store(Request $request)
+    public function store(CreateCityRequest $request)
     {
         $this->city->create([
             'cityName' => $request->city
         ]);
-
         return redirect()->route('cities.index');
     }
 
@@ -50,7 +50,7 @@ class CitiesController extends Controller
         return view('cities.edit_city', compact('city'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateCityRequest $request, $id)
     {
         $city = $this->city->findOrFail($id);
         $city->update([

@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4def5d23-66e8-472c-95cf-7c7a6ac6affe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CreateCityRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CreateCustomerRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateCityRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UpdateCustomerRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/repositories/CustomerRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/repositories/RepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/repositories/eloquent/CustomerEloquentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/services/CustomerServiceInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/services/ServiceInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/services/implement/BaseService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/services/implement/CustomerService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CitiesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CitiesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_29_065014_add_column_image_to_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_29_065014_add_column_image_to_customers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cities/list_customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cities/list_customer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cities/create_city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cities/create_city.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cities/edit_city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cities/edit_city.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customers/create_customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customers/create_customer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customers/edit_customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customers/edit_customer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customers/list_customer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customers/list_customer.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,13 +138,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel_student_manager_validate_login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/repositories" />
       <recent name="$PROJECT_DIR$/storage/app/public" />
       <recent name="$PROJECT_DIR$/storage/app" />
       <recent name="$PROJECT_DIR$/storage/app/public/upload" />
@@ -166,7 +182,10 @@
       <updated>1572262612351</updated>
       <workItem from="1572262615179" duration="16519000" />
       <workItem from="1572281504277" duration="296000" />
-      <workItem from="1572310334787" duration="24395000" />
+      <workItem from="1572310334787" duration="24662000" />
+      <workItem from="1572399462585" duration="7126000" />
+      <workItem from="1572485033450" duration="5396000" />
+      <workItem from="1572500428831" duration="7555000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1572339509262</created>
@@ -175,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572339509262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update method upload image">
+      <created>1572342271306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572342271306</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +223,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="update method upload image" />
+    <option name="LAST_COMMIT_MESSAGE" value="update method upload image" />
   </component>
 </project>
