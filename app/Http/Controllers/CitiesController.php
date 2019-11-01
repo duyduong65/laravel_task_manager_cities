@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
 use App\Http\Requests\CreateCityRequest;
 use App\Http\Requests\UpdateCityRequest;
 use App\Http\services\CityServiceInterface;
