@@ -67,4 +67,10 @@ class CustomerService extends BaseService implements CustomerServiceInterface
         }
         $this->customerRepository->delete($customer);
     }
+
+    function search($request)
+    {
+        $search = $request->input('search');
+        return $this->customerRepository->search($search);
+    }
 }

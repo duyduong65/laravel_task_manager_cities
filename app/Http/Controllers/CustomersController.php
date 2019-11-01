@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\City;
 use App\Customer;
-use App\Http\repositories\CityRepositoryInterface;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Http\services\CityServiceInterface;
 use App\Http\services\CustomerServiceInterface;
-use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 
 class CustomersController extends Controller
 {
     protected $customerService;
     protected $cityService;
 
-    public function __construct(CustomerServiceInterface $customerService,CityServiceInterface $cityService )
+    public function __construct(CustomerServiceInterface $customerService, CityServiceInterface $cityService)
     {
         $this->middleware('auth');
         $this->customerService = $customerService;
@@ -64,5 +62,11 @@ class CustomersController extends Controller
     {
         $this->customerService->destroy($id);
         return redirect()->route('customers.index');
+    }
+
+    public function search(Request $request)
+    {
+        $customers = $this->customerService->search($request);
+        dd($customers);
     }
 }

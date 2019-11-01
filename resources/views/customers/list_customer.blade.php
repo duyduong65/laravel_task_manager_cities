@@ -2,7 +2,28 @@
 @section('content')
     <div class="container">
         <div class="col-xl-auto">
-            <a href="{{route('customers.create')}}"><img src="https://img.icons8.com/nolan/50/000000/add.png"></a>
+            <table>
+                <tr>
+                    <td>
+                        <a href="{{route('customers.create')}}"><img
+                                src="https://img.icons8.com/nolan/50/000000/add.png">
+                        </a>
+                    </td>
+            </table>
+            <form action="{{route('customers.search')}}" method="get" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="search" class="form-control" style="border: #6c757d solid 1px; border-radius: 5px">
+                        </td>
+                        <td>
+                            <button type="submit" style="border-radius: 5px">
+                                <img src=" https://img.icons8.com/nolan/30/000000/search.png">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
             <div class="col-xl-auto-" style="border:#95999c solid 1px">
                 <table class="table">
                     <thead>
@@ -25,7 +46,8 @@
                             <td>{{$customer->phone}}</td>
                             <td>{{$customer->address}}</td>
                             <td>{{$customer->city->cityName}}</td>
-                            <td><img src="{{asset("storage/$customer->image")}}" class="img-fluid" alt="" width="100" ></td>
+                            <td><img src="{{asset("storage/$customer->image")}}" class="img-fluid" alt=""
+                                     width="100"></td>
                             <td>
                                 <a href="{{route('customers.destroy',$customer->id)}}">
                                     <img src="https://img.icons8.com/nolan/30/000000/delete-sign.png" alt="delete">

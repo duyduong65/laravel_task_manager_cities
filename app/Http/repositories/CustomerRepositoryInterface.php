@@ -9,5 +9,5 @@ use App\Http\Requests\CreateCustomerRequest;
 
 interface CustomerRepositoryInterface extends RepositoryInterface
 {
-
+    function search($search);
 }

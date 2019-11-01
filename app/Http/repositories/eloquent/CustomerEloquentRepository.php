@@ -39,4 +39,9 @@ class CustomerEloquentRepository implements CustomerRepositoryInterface
     {
         $obj->delete();
     }
+
+    function search($search)
+    {
+        return $this->customer->where('lastName','LIKE',"%$search%")->get();
+    }
 }
